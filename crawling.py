@@ -27,15 +27,3 @@ def extract_data(soup):
         upload_contents += content
     
     return upload_contents
-
-# URL을 지정합니다.
-url = 'https://www.yes24.com/24/Category/NewProductList/001001003?sumGb=01'  # 원하는 웹 페이지의 URL로 바꾸세요.
-
-# parsing_beautifulSoup 함수 호출
-soup = parsing_beautifulSoup(url)
-
-# 반환된 BeautifulSoup 객체를 사용하여 원하는 데이터를 추출할 수 있습니다.
-extracted_data = extract_data(soup)
-
-# 추출된 데이터 출력
-print(extracted_data)
