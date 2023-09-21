@@ -1,8 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-print('dd')
-
 def parsing_beautifulSoup(url):
 
     data = requests.get(url)

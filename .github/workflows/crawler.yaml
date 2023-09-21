@@ -2,7 +2,7 @@ name: 'crawler'
 
 on:
   schedule:
-    - cron: '50 22 * * *'
+    - cron: '14 21 * * *'
 
 jobs:
   build:
