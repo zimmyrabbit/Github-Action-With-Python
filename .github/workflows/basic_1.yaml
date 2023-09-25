@@ -1,0 +1,29 @@
+# GitHub Upload 시 식별 용도 
+name: Basic Sample
+
+# on - event trigger 정의
+# workflow_dispatch - 사용자가 trigger 실행
+on: workflow_dispatch
+
+# build, deploy 2개의 job 정의
+jobs:
+  build:
+    # runner - 어떤 환경에서 실행할 것인지
+    runs-on: ubuntu-lastest
+    # step
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Build project
+      run: |
+        echo "Build Project"
+    - name: Run tests
+      run: |
+        echo "Run Test"
+  deploy:
+    needs: build
+    runs-on: ubuntu-lastest
+    steps:
+    - name: Deploy to production
+      run: |
+        echo "Deploying to production server"
