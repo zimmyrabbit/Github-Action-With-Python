@@ -9,7 +9,7 @@ on: workflow_dispatch
 jobs:
   build:
     # runner - 어떤 환경에서 실행할 것인지
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     # step
     steps:
     - name: Checkout
@@ -22,7 +22,7 @@ jobs:
         echo "Run Test"
   deploy:
     needs: build
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
     - name: Deploy to production
       run: |
