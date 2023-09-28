@@ -12,18 +12,18 @@ jobs:
     steps:
     - name: Step 1
       run: |
-        echo "Run Step 1, varibale : $variable"
+        echo "Run Step 1, variable : $variable"
     - name: Step 2
       run: |
-        echo "Run Step 2, varibale : $variable"
+        echo "Run Step 2, variable : $variable"
       env:
-        varibale: test3
+        variable: test3
     - name: Step 3
       run: |
-        echo "Run Step 3, varibale : $variable"
+        echo "Run Step 3, variable : $variable"
   build_2:
     runs-on: ubuntu-latest
     steps:
     - name: Step 1
       run: |
-        echo "Run Step 1, varibale : $variable"
+        echo "Run Step 1, variable : $variable"
