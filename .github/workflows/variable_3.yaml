@@ -1,0 +1,19 @@
+---
+  name: Variables 3
+  on: workflow_dispatch
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout 
+        uses: actions/checkout@v2
+      - name: Build project
+        run: |
+          echo "Build Project ${{ vars.MYNAME }}"
+    deploy:
+      needs: build
+      runs-on: ubuntu-latest
+      steps:
+      - name: Deploy to production
+        run: |
+          echo "Deploying to production server ${{ vars.MYNAME }}"
